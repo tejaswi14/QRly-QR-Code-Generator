@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QRly | QR Code Generator</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<main class="page">
+<section class="card">
+<div class="brand"><div class="logo">▦</div><div><h1>QRly</h1><p>Simple. Fast. Scannable.</p></div></div>
+<div class="hero">
+<span class="badge">QR CODE GENERATOR</span>
+<h2>Create a QR code in seconds.</h2>
+<p>Enter any text or URL, give your QR code a name, and download it as a PNG.</p>
+</div>
+<form action="/generate" method="post">
+<label for="data">Text or URL</label>
+<textarea id="data" name="data" rows="5" placeholder="https://example.com or enter any text..." required></textarea>
+<label for="filename">File name</label>
+<input id="filename" name="filename" type="text" placeholder="my_qr_code" value="my_qr_code">
+<button type="submit"><span>Generate QR Code</span><span class="arrow">→</span></button>
+</form>
+<div class="features">
+<div><strong>01</strong><span>Enter content</span></div>
+<div><strong>02</strong><span>Generate instantly</span></div>
+<div><strong>03</strong><span>Download PNG</span></div>
+</div>
+<footer>QRly • QR Code Generator</footer>
+</section>
+</main>
+</body>
+</html>
